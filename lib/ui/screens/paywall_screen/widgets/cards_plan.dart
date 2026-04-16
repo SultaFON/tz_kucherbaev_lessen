@@ -26,6 +26,7 @@ class CardsPlan extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeInOut,
+        // ignore: deprecated_member_use
         transform: Matrix4.identity()..scale(isSelected ? 1.03 : 1.0),
 
         margin: const EdgeInsets.symmetric(vertical: 10),
@@ -42,6 +43,7 @@ class CardsPlan extends StatelessWidget {
 
           boxShadow: [
             BoxShadow(
+              // ignore: deprecated_member_use
               color: Colors.black.withOpacity(0.04),
               blurRadius: 10,
               offset: const Offset(0, 4),
@@ -51,7 +53,6 @@ class CardsPlan extends StatelessWidget {
 
         child: Row(
           children: [
-            /// Левая часть (текст)
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,8 +66,6 @@ class CardsPlan extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-
-                      /// Бейдж "Выгодно"
                       if (isYear) ...[
                         const SizedBox(width: 8),
                         Container(
@@ -75,6 +74,7 @@ class CardsPlan extends StatelessWidget {
                             vertical: 3,
                           ),
                           decoration: BoxDecoration(
+                            // ignore: deprecated_member_use
                             color: Colors.green.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -100,8 +100,6 @@ class CardsPlan extends StatelessWidget {
                 ],
               ),
             ),
-
-            /// Правая часть (radio indicator)
             AnimatedContainer(
               duration: const Duration(milliseconds: 250),
               width: 22,

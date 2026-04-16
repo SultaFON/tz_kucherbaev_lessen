@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kucherbaev_sultan_tz/data/di/get_it_servis.dart';
+import 'package:kucherbaev_sultan_tz/data/di/get_it_services.dart';
 import 'package:kucherbaev_sultan_tz/ui/resurses/colors.dart';
 import 'package:kucherbaev_sultan_tz/ui/screens/paywall_screen/widgets/cards_plan.dart';
 import 'package:kucherbaev_sultan_tz/ui/screens/paywall_screen/widgets/gialog_widget.dart';
@@ -14,12 +14,8 @@ class PaywallScreen extends StatefulWidget {
 class _PaywallScreenState extends State<PaywallScreen> {
   String selectedPlan = 'month';
 
-  void _selectPlan(String plan) {
-    setState(() => selectedPlan = plan);
-  }
-
   Future<void> _onBuySuccess() async {
-    await getItService.sharedPreferensService.setSubscribed(true);
+    await getItService.sharedPreferencesService.setSubscribed(true);
 
     if (!mounted) return;
   }

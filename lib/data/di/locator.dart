@@ -1,21 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kucherbaev_sultan_tz/domain/services/navigator_service.dart';
-import 'package:kucherbaev_sultan_tz/domain/services/shared_preferens_service.dart';
+import 'package:kucherbaev_sultan_tz/domain/services/shared_preferences_service.dart';
 
 class Locator {
   late NavigatorService navigatorService;
-  late SharedPreferensService sharedPreferensService;
+  late SharedPreferencesService sharedPreferencesService;
   final navigatorKey = GlobalKey<NavigatorState>();
 
-  void _registeration() {
+  void _registration() {
     GetIt.I.registerSingleton<NavigatorService>(navigatorService);
-    GetIt.I.registerSingleton<SharedPreferensService>(sharedPreferensService);
+    GetIt.I.registerSingleton<SharedPreferencesService>(sharedPreferencesService);
   }
 
   Locator() {
     navigatorService = NavigatorService(navigatorKey: navigatorKey);
-    sharedPreferensService = SharedPreferensService();
-    _registeration();
+    sharedPreferencesService = SharedPreferencesService();
+    _registration();
   }
 }

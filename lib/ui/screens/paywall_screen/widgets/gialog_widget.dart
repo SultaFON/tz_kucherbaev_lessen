@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:kucherbaev_sultan_tz/ui/resurses/colors.dart';
 
@@ -23,6 +23,7 @@ class DialogWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
+                // ignore: deprecated_member_use
                 color: Colors.black.withOpacity(0.15),
                 blurRadius: 30,
                 offset: const Offset(0, 10),
@@ -35,6 +36,7 @@ class DialogWidget extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
+                  // ignore: deprecated_member_use
                   color: AppColors.primary.withOpacity(0.1),
                   shape: BoxShape.circle,
                 ),

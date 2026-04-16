@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kucherbaev_sultan_tz/data/di/get_it_servis.dart';
+import 'package:kucherbaev_sultan_tz/data/di/get_it_services.dart';
 import 'package:kucherbaev_sultan_tz/ui/resurses/colors.dart';
 import 'package:kucherbaev_sultan_tz/ui/resurses/image.dart';
 
@@ -78,8 +78,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
               ),
             ),
-
-            /// Dots indicator
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(2, (index) {
@@ -90,7 +88,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   height: 8,
                   width: isActive ? 24 : 8,
-                  // ← эффект "растягивания"
                   decoration: BoxDecoration(
                     color: isActive ? AppColors.primary : Colors.grey,
                     borderRadius: BorderRadius.circular(20),
@@ -98,10 +95,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 );
               }),
             ),
-
             const SizedBox(height: 20),
-
-            /// Button
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: SizedBox(

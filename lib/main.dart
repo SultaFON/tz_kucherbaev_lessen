@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           elevation: 0,
           scrolledUnderElevation: 0,
-          surfaceTintColor: Colors.transparent, // 👈 убирает изменение цвета
+          surfaceTintColor: Colors.transparent,
           backgroundColor: Colors.white,
         ),
       ),

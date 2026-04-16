@@ -48,6 +48,7 @@ class HomeScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
+                  // ignore: deprecated_member_use
                   color: Colors.black.withOpacity(0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 5),
@@ -57,7 +58,6 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Image
                 ClipRRect(
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(20),
@@ -75,7 +75,6 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      /// Title
                       Text(
                         lesson["title"]!,
                         style: const TextStyle(
@@ -85,8 +84,6 @@ class HomeScreen extends StatelessWidget {
                       ),
 
                       const SizedBox(height: 6),
-
-                      /// Description
                       Text(
                         lesson["description"]!,
                         style: TextStyle(
@@ -96,8 +93,6 @@ class HomeScreen extends StatelessWidget {
                       ),
 
                       const SizedBox(height: 12),
-
-                      /// Time row
                       Row(
                         children: [
                           const Icon(Icons.access_time, size: 18),
@@ -110,8 +105,6 @@ class HomeScreen extends StatelessWidget {
                       ),
 
                       const SizedBox(height: 16),
-
-                      /// Button (inactive logic)
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(

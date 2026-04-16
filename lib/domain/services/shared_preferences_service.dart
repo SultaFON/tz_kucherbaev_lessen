@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPreferensService {
+class SharedPreferencesService {
   static const _isSubscribedKey = "is_subscribed";
 
 
